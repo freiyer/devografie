@@ -1,0 +1,7 @@
+devografiecms_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: DevografiecmsBundle:Default:index }
+
+indexadmin:
+    path:     /devo_admin
+    defaults: { _controller: DevografiecmsBundle:Administration:indexadmin }
