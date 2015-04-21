@@ -55,51 +55,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 1</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 2</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 3</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 4</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 5</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 6</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 7</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 8</td>
-                                    </tr>
-                                    <tr class="gradeA odd" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 9</td>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 10</td>
-                                    </tr>
-                                    </tr>
-                                    <tr class="gradeA even" role="row">
-                                        <td class="sorting_1">Parametre de test</td>
-                                        <td>Parametre 11</td>
-                                    </tr>
+                                    {% for form in forms %}
+                                        <form>
+                                            <tr class="gradeA odd" role="row">
+                                                <td class="sorting_1">{{ form.vars.value.libelle }}</td>
+                                                <td>{{ form_widget(form.actif) }}</td>
+                                            </tr>
+                                        </form>
+                                    {% endfor %}
                                 </tbody>
                                 <tfoot>
                                     <tr>
