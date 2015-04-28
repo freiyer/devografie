@@ -57,17 +57,15 @@
                                 </thead>
                                 <tbody>
                                     {% for form in forms %}
-
                                             <tr class="gradeA odd" role="row">
                                                 <td class="sorting_1">{{ form.vars.value.libelle }}</td>
-                                                <form id="{{ form.vars.value.id }}" action="{{ path('editparametres') }}" method="post" {{ form_enctype(form) }}>
+                                                <form id="{{ form.vars.value.id }}" action="{{ path('editparametres', {id : form.vars.value.id}) }}" method="post" {{ form_enctype(form) }}>
                                                     <td>{{ form_widget(form.actif) }}</td>
                                                     <td>
                                                         <input class="btn btn-success" type="submit" />
                                                     </td>
                                                 </form>
                                             </tr>
-
                                     {% endfor %}
                                 </tbody>
                                 <tfoot>

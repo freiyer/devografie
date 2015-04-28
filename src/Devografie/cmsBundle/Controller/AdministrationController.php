@@ -23,9 +23,9 @@ class AdministrationController extends Controller
         ));
     }
 
-    public function editparametresAction()
+    public function editparametresAction($id)
     {
-        echo 'test edition';
+        echo $id;
 
     }
 

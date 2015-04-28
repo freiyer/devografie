@@ -7,5 +7,5 @@ indexadmin:
     defaults: { _controller: DevografiecmsBundle:Administration:indexadmin }
 
 editparametres:
-    path:     /devo_admin/editparametres
+    path:     /devo_admin/editparametres/{id}
     defaults: { _controller: DevografiecmsBundle:Administration:editparametres }
