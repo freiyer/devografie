@@ -52,16 +52,22 @@
                                     <tr role="row">
                                         <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 227px;">Paramètres</th>
                                         <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 307px;">Actif</th>
+                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 307px;">Validation</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {% for form in forms %}
-                                        <form>
+
                                             <tr class="gradeA odd" role="row">
                                                 <td class="sorting_1">{{ form.vars.value.libelle }}</td>
-                                                <td>{{ form_widget(form.actif) }}</td>
+                                                <form id="{{ form.vars.value.id }}" action="{{ path('editparametres') }}" method="post" {{ form_enctype(form) }}>
+                                                    <td>{{ form_widget(form.actif) }}</td>
+                                                    <td>
+                                                        <input class="btn btn-success" type="submit" />
+                                                    </td>
+                                                </form>
                                             </tr>
-                                        </form>
+
                                     {% endfor %}
                                 </tbody>
                                 <tfoot>

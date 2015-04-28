@@ -5,3 +5,7 @@ devografiecms_homepage:
 indexadmin:
     path:     /devo_admin
     defaults: { _controller: DevografiecmsBundle:Administration:indexadmin }
+
+editparametres:
+    path:     /devo_admin/editparametres
+    defaults: { _controller: DevografiecmsBundle:Administration:editparametres }

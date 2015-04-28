@@ -23,4 +23,10 @@ class AdministrationController extends Controller
         ));
     }
 
+    public function editparametresAction()
+    {
+        echo 'test edition';
+
+    }
+
 }

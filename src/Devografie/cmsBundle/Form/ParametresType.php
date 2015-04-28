@@ -15,11 +15,15 @@ class ParametresType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('id', 'integer', array(
+                'label' => 'Id'
+            ))
             ->add('libelle', 'text', array(
                 'label' => 'Libelle'
             ))
             ->add('actif', 'checkbox', array(
-                'label' => 'Actif'
+                'label' => 'Actif',
+                'required' => false
             ))
         ;
     }
