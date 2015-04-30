@@ -47,6 +47,19 @@ class Parametres
     }
 
     /**
+     * Set id
+     *
+     * @param integer $id
+     * @return Parametres
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
      * Set libelle
      *
      * @param string $libelle
@@ -85,7 +98,7 @@ class Parametres
     /**
      * Get actif
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getActif()
     {

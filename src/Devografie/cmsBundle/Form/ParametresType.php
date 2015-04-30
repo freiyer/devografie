@@ -16,7 +16,8 @@ class ParametresType extends AbstractType
     {
         $builder
             ->add('id', 'integer', array(
-                'label' => 'Id'
+                'label' => 'Id',
+                'required' => false
             ))
             ->add('libelle', 'text', array(
                 'label' => 'Libelle'
